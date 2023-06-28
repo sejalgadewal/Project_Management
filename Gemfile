@@ -7,10 +7,13 @@ gem 'webpacker', '~> 5.0'
 
 gem 'bulma-rails', '~> 0.9.0'
 
-gem 'devise', '~> 4.4'
+gem 'devise'
 
 gem 'simple_form'
 
+
+
+gem 'public_activity','~> 2.0.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
 
@@ -62,16 +65,20 @@ group :development, :test do
 end
 
 group :development do
-gem 'listen', '~> 4.1.8'
 
+gem 'eventmachine'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
+  gem 'listen', '>= 3.0.5'
+  gem 'spring-watcher-listen', '~> 2.1'
+  gem 'better_errors', '~> 2.10', '>= 2.10.1'
+  gem 'guard', '~> 2.18'
+  gem 'guard-livereload', '~> 2.5.2'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+   gem "spring"
 end
 
 group :test do
